@@ -1,8 +1,18 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "noImplicitAny": true,
-    "strict": true,
-    "declaration": true,
-  }
+    "target": "ES2020",
+    "module": "ESNext",
+    "strict": true, // Enable strict type-checking options
+    "esModuleInterop": true, // Enables compatibility with default import syntax in TypeScript
+    "outDir": "./", // Output directory for compiled files
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "moduleResolution": "node", // Module resolution strategy to use
+    "resolveJsonModule": true, // Allow importing .json files
+    "allowJs": true, // Allow JavaScript files to be imported into your project
+    "removeComments": true, // Remove comments from the compiled JavaScript
+    "sourceMap": false, // Generate source map files for debugging
+    "declaration": true // Added to generate declaration files
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"]
 }
